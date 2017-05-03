@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
+  <!-- <img src="https://maps.aerisapi.com/[client_id]_[client_key]/flat,radar,admin/500x300/minneapolis,mn,5/current.png" style="width: 500px; height: 300px;" /> -->
     <link rel="stylesheet" href="everyday_Decision.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
     <title>My everyday_Decision</title>
-  </head>
-  <body>
-  <center><h1>What to wear</h1></center>
-  <div class="allButton">
-<center>  Date:<input class = "dateClass" type="date">
-  Weather:<input class = "weatherClass" type="weather">
-  Time:<input class = "timeClass" type="time">
-  Search:<input class= "searchClass" type="search"></center>
-</div>
-<br><br>
-<div class="allRadio">
-<input type="radio" name="season" value= "Winter" class="">Winter <br>
-<input type="radio" name="season" value= "Springs" class="">Springs <br>
-<input type="radio" name="season" value= "Summer" class="">Summer <br>
-<input type="radio" name="season" value= "Automn" class="">Automn <br><br>
-</div>
-<input type="button" value="Display" class= "buttClass">
-<script src="everyday_Decision.js" charset="utf-8"></script>
-  </body>
+</head>
+
+<body>
+    <center>
+        <h1>What to wear</h1></center>
+    <div class="allButton">
+        <center> Date:<input class="dateClass" type="date"> Weather:
+            <input class="weatherClass" type="weather"> Time:
+            <input class="timeClass" type="time"> Search:
+            <input class="searchClass" type="search" placeholder="Your city name"></center>
+    </div>
+
+    <script class="myTemplate" type="text/handlebars-x">
+        <div class="allRadio">
+
+            <input type="radio" name="season"> {{#each one}} {{this.season1}} {{/each}} <br>
+            <input type="radio" name="season"> {{#each one}} {{this.season2}} {{/each}} <br>
+            <input type="radio" name="season"> {{#each one}} {{this.season3}} {{/each}} <br>
+            <input type="radio" name="season"> {{#each one}} {{this.season4}} {{/each}}
+
+        </div>
+    </script>
+    <div class="displayButt"></div>
+    <input type="button" value="Display" class="buttClass">
+    <script src="everyday_Decision.js" charset="utf-8"></script>
+</body>
+
 </html>

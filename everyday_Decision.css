@@ -1,0 +1,18 @@
+h1 {
+    align-content: center;
+    text-decoration: blue;
+    background-color: #24292e;
+    margin-bottom: 0px;
+    line-height: normal;
+}
+
+.allButton {
+    background-color: #505050;
+    line-height: 50px;
+    margin-top: 0px;
+}
+
+.allRadio {
+    background-color: #505050;
+    width: 150px;
+}
