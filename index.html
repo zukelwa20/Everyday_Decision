@@ -1,35 +1,35 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+ <html>
 
-<head>
+ <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="everyday_Decision.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
     <title>My everyday_Decision</title>
-</head>
+ </head>
 
-<body>
+ <body>
     <center>
         <h1>MakhoFLYING Squad</h1></center>
 
   <script class="tableTemplate" type="text/handlebars-x">
+  <h2>Departure</h2>
   <table>
           <tr>
-          <th>town</th>
+          <th>Town</th>
           <th>Time</th>
           <th>Price</th>
          </tr>
 
-          {{#each townList}}
+         {{#each townList}}
           <tr>
           <td>{{this.town}}</td>
           <td>{{this.Time}}</td>
           <td>{{this.Price}}</td>
-
-          </tr>
+             </tr>
           {{/each}}
           </table>
-</script>
+    </script>
     <div class="allButton">
         <center> Date:<input class="dateClass" type="date"> Weather:
             <input class="weatherClass" type="weather"> Time:
@@ -40,17 +40,15 @@
 
     <script class="myTemplate" type="text/handlebars-x">
         <div class="allRadio">
-
-            <input type="radio" name="city"> {{#each radioBut}} {{town1}} {{/each}} <br>
-            <input type="radio" name="city"> {{#each radioBut}} {{town2}} {{/each}} <br>
-            <input type="radio" name="city"> {{#each radioBut}} {{town3}} {{/each}} <br>
-            <input type="radio" name="city"> {{#each radioBut}} {{town4}} {{/each}}
-
+            <input type="radio" name="city"> {{#each radioBut}} {{this.town1}} {{/each}} <br>
+            <input type="radio" name="city"> {{#each radioBut}} {{this.town2}} {{/each}} <br>
+            <input type="radio" name="city"> {{#each radioBut}} {{this.town3}} {{/each}} <br>
+            <input type="radio" name="city"> {{#each radioBut}} {{this.town4}} {{/each}}
         </div>
     </script>
     <div class="displayButt"></div><br>
     <div class="displayTable"></div>
     <script src="everyday_Decision.js" charset="utf-8"></script>
-</body>
+    </body>
 
-</html>
+    </html>
