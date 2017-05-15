@@ -24,15 +24,14 @@
          {{#each townList}}
           <tr>
           <td>{{this.town}}</td>
+          <td>{{this.date}}
           <td>{{this.Time}}</td>
           <td>{{this.Price}}</td>
              </tr>
-          {{/each}}
           </table>
     </script>
     <div class="allButton">
-        <center> Date:<input class="dateClass" type="date"> Weather:
-            <input class="weatherClass" type="weather"> Time:
+        <center> Date:<input class="dateClass" type="date"> Time
             <input class="timeClass" type="time"> Search:
             <input class="searchClass" type="search" placeholder="Your city name">
             <input type="button" value="Search" class="searchButt"></center>
@@ -40,10 +39,10 @@
 
     <script class="myTemplate" type="text/handlebars-x">
         <div class="allRadio">
-            <input type="radio" name="city"> {{#each radioBut}} {{this.town1}} {{/each}} <br>
-            <input type="radio" name="city"> {{#each radioBut}} {{this.town2}} {{/each}} <br>
-            <input type="radio" name="city"> {{#each radioBut}} {{this.town3}} {{/each}} <br>
-            <input type="radio" name="city"> {{#each radioBut}} {{this.town4}} {{/each}}
+            <input type="radio" class="capeClass" name="city"> {{#each radioBut}} {{this.town1}} {{/each}} <br>
+            <input type="radio" class="eastClass" name="city"> {{#each radioBut}} {{this.town2}} {{/each}} <br>
+            <input type="radio" class="aliceClass" name="city"> {{#each radioBut}} {{this.town3}} {{/each}} <br>
+            <input type="radio" class="fortClass" name="city"> {{#each radioBut}} {{this.town4}} {{/each}}
         </div>
     </script>
     <div class="displayButt"></div><br>
