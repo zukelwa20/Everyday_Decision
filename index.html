@@ -1,53 +1,67 @@
- <!DOCTYPE html>
- <html>
+<!DOCTYPE html>
+<html>
 
- <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="everyday_Decision.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-    <title>My everyday_Decision</title>
- </head>
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="everyday_Decision.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+   <title>My everyday_Decision</title>
+</head>
 
- <body>
-    <center>
-        <h1>MakhoFLYING Squad</h1></center>
+<body>
+   <center>
+       <h1>Weekly Flights</h1></center>
 
-  <script class="tableTemplate" type="text/handlebars-x">
-  <h2>Departure</h2>
-  <table>
-          <tr>
-          <th>Town</th>
-          <th>Time</th>
-          <th>Price</th>
-         </tr>
+ <script class="tableTemplate" type="text/handlebars-x">
+ <table>
+         <tr>
+         <th>Day</th>
+         <th>Time</th>
+         <th>Town</th>
+        </tr>
 
-         {{#each townList}}
-          <tr>
-          <td>{{this.town}}</td>
-          <td>{{this.date}}
-          <td>{{this.Time}}</td>
-          <td>{{this.Price}}</td>
-             </tr>
-          </table>
-    </script>
-    <div class="allButton">
-        <center> Date:<input class="dateClass" type="date"> Time
-            <input class="timeClass" type="time"> Search:
-            <input class="searchClass" type="search" placeholder="Your city name">
-            <input type="button" value="Search" class="searchButt"></center>
-    </div>
+        {{#each townList}}
+         <tr>
+         <td>{{this.day}}</td>
+         <td>{{this.time}}</td>
+         <td>{{this.town}}</td>
+        </tr>{{/each}}
+         </table>
+   </script>
+   <div class="allButton">
+       <center>
+           <input class="searchClass" type="search" placeholder="Your city name">
+           <input type="button" value="Search" class="searchButt">
+           <input type="button" value="Submit" class="submitBut">
+         </center>
+   </div>
 
-    <script class="myTemplate" type="text/handlebars-x">
-        <div class="allRadio">
-            <input type="radio" class="capeClass" name="city"> {{#each radioBut}} {{this.town1}} {{/each}} <br>
-            <input type="radio" class="eastClass" name="city"> {{#each radioBut}} {{this.town2}} {{/each}} <br>
-            <input type="radio" class="aliceClass" name="city"> {{#each radioBut}} {{this.town3}} {{/each}} <br>
-            <input type="radio" class="fortClass" name="city"> {{#each radioBut}} {{this.town4}} {{/each}}
-        </div>
-    </script>
-    <div class="displayButt"></div><br>
-    <div class="displayTable"></div>
-    <script src="everyday_Decision.js" charset="utf-8"></script>
-    </body>
+<center>   <script class="myTemplate" type="text/handlebars-x">
+       <div class="alldropDowns">
+      <li>  <select class="dayClass">
+        <option value="" disabled selected="">Weekdays</option>
+                {{#each day}}
+         <option>{{this.day}}</option>
+                   {{/each}}
+       </select></center></li>
 
-    </html>
+          <li><center> <select class="timeCLass">
+         <option value="" disabled selected="">Time</option>
+                  {{#each time}}
+           <option>{{this.time}}</option>
+                 {{/each}}
+        </select></center></li>
+
+       <li><center><select class="townClass">
+          <option value="" disabled selected="">Town</option>
+                {{#each town}}
+         <option>{{this.town}}</option>
+                   {{/each}}
+       </select></center></li>
+        </div> </script></center>
+   <div class="displayButt"></div><br>
+   <div class="displayTable"></div>
+   <div class= "stored"></div>
+   <script src="everyday_Decision.js" charset="utf-8"></script>
+   </body>
+   </html>
